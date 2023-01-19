@@ -1,0 +1,64 @@
+<html>
+    <head>
+        <title>eu i vc</title>
+        <link rel="stylesheet" href="style.css" link>
+        
+    </head>
+    <body>
+        <div class="main">
+            <div class="videocont">
+                <video autoplay muted loop id="myVideo">
+                    <source src="sanrio.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="roundmain">
+                <div class="noobdiv">
+                    <img src="img1.jpg" width="200" height="200">
+                </div>
+                <div class="pro" >
+                    <img src="img2.jpg" width="200" height="200">
+                </div>
+                <div class="allnm">
+                    <strong class="name">gabriel</strong>
+                    <strong class="name2">gabriela</strong>
+                </div>
+            <div class="info">
+                <div class="datediv">
+                    <strong class="date">13/01 🎂</strong>
+                    <strong class="date">22/01 🎂</strong>
+                </div>
+                <div>
+                    <strong class="heart">💖</strong>
+                </div>
+                <strong class="name3">Namorando a </strong>
+                </div>
+            </div>
+        </div>
+        <button class="black" onclick="change()"> 
+            <h2>clique em qualquer lugar para continuar</h2>
+        </button>
+        <script>
+            function change() {
+                var element = document.getElementsByClassName("main")[0];
+                element.style.display = "block";
+                var element = document.getElementsByClassName("black")[0];
+                element.style.display = "none";
+                var audio = new Audio('heylover.mp3');
+                audio.volume = 0.3;
+                audio.play();
+            }
+        </script>
+    </body>
+</html>
+<script>
+    date1 = new Date(2022, 10, 26, 23, 59, 59, 999);  
+    date2 = new Date();
+
+    var time_difference = date2.getTime() - date1.getTime();  
+    console.log(time_difference)
+    var days_difference = time_difference / (1000 * 60 * 60 * 24);
+    var days = Math.floor(days_difference)
+
+    document.getElementsByClassName("name3")[0].innerHTML = "Namorando a " + days.toString() + " dias!"
+
+</script>
