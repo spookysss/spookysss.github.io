@@ -1,65 +1,43 @@
-<html>
-    <head>
-        <title>eu i vc</title>
-        <link rel="stylesheet" href="style.css" link>
-        
-    </head>
-    <body>
-        <div class="main">
-            <div class="videocont">
-                <video autoplay muted loop id="myVideo">
-                    <source src="sanrio.mp4" type="video/mp4">
-                </video>
-            </div>
-            <div class="roundmain">
-                <div class="noobdiv">
-                    <img src="img1.jpg" width="200" height="200">
-                </div>
-                <div class="pro" >
-                    <img src="img2.jpg" width="200" height="200">
-                </div>
-                <div class="allnm">
-                    <strong class="name">gabriel</strong>
-                    <strong class="name2">gabriela</strong>
-                </div>
-            <div class="info">
-                <div class="datediv">
-                    <strong class="date">13/01 🎂</strong>
-                    <strong class="date">22/01 🎂</strong>
-                </div>
-                <div>
-                    <strong class="heart">💖</strong>
-                </div>
-                <strong class="name3">Namorando a </strong>
-                </div>
-            </div>
-        </div>
-        <button class="black" onclick="change()"> 
-            <h2>clique em qualquer lugar para continuar</h2>
-        </button>
-        <script>
-            function change() {
-                var element = document.getElementsByClassName("main")[0];
-                element.style.display = "block";
-                var element = document.getElementsByClassName("black")[0];
-                element.style.display = "none";
-                var audio = new Audio('heylover.mp3');
-                audio.volume = 0.3;
-                audio.loop = true;
-                audio.play();
-            }
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Download</title>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: black;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    button {
+        border: none;
+        outline: none;
+        background-color: white;
+        color: black;
+        font-size: 20px;
+        font-weight: bold;
+        padding: 15px 30px;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    button:hover {
+        transform: scale(1.1);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+    }
+</style>
+</head>
+<body>
+    <button onclick="window.location.href='https://www.mediafire.com/file/xflek4b26st93uy/Sonoplastia2024.zip/file'">Download</button>
+</body>
 </html>
-<script>
-    date3 = new Date(2022, 09, 26, 0, 0, 0, 0);  
-    date2 = new Date();
-
-    var time_difference = date2.getTime() - date3.getTime();  
-    console.log(time_difference)
-    var days_difference = time_difference / (1000 * 60 * 60 * 24);
-    var days = Math.floor(days_difference)
-
-    document.getElementsByClassName("name3")[0].innerHTML = "Namorando a " + days.toString() + " dias!"
-
-</script>
