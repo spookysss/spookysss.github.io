@@ -1,44 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Download</title>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
-<style>
-    body {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        background-color: black;
-        font-family: 'Roboto', sans-serif;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download</title>
+    <style>
+        /* Reset básico para manter tudo limpo */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
 
-    button {
-        border: none;
-        outline: none;
-        background-color: white;
-        color: black;
-        font-size: 20px;
-        font-weight: bold;
-        padding: 15px 30px;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: all 0.3s ease;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
+        /* Fundo animado para destacar o efeito de vidro */
+        body {
+            background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+            background-size: 400% 400%;
+            animation: gradientAnim 15s ease infinite;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
 
-    button:hover {
-        transform: scale(1.1);
-        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-    }
-</style>
+        @keyframes gradientAnim {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        /* O Botão com Glassmorphism (Gaussian Blur) */
+        .btn-download {
+            /* Fundo semi-transparente */
+            background: rgba(255, 255, 255, 0.15);
+            
+            /* O famoso Blur (Desfoque Gaussiano) */
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            
+            /* Bordas finas para simular o corte do vidro */
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            border-top: 1px solid rgba(255, 255, 255, 0.5);
+            border-left: 1px solid rgba(255, 255, 255, 0.5);
+            
+            /* Sombra suave */
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+
+            /* Estilo do texto */
+            color: #ffffff;
+            text-decoration: none;
+            font-size: 1.8rem;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 25px 60px;
+            border-radius: 50px;
+            
+            /* Animação de interação */
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+
+        /* Efeito ao passar o mouse por cima */
+        .btn-download:hover {
+            background: rgba(255, 255, 255, 0.25);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px 0 rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.4);
+        }
+
+        /* Efeito ao clicar */
+        .btn-download:active {
+            transform: translateY(0);
+            box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.2);
+        }
+    </style>
 </head>
 <body>
-    <img src="297ecd8b98883873.png">
+
+    <a href="https://www.mediafire.com/file/2sj094c20wt6ake/SONOPLASTIA.zip/file" class="btn-download" target="_blank" rel="noopener noreferrer">DOWNLOAD</a>
+
 </body>
 </html>
-
